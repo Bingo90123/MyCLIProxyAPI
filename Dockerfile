@@ -34,7 +34,9 @@ RUN chmod 777 /CLIProxyAPI/config.yaml
 WORKDIR /CLIProxyAPI
 
 EXPOSE 8317
-
+# 找到原有 Dockerfile 的末尾，在 EXPOSE 8317 下面加上这行：
+ENV PORT=8317
+ENV HOST=0.0.0.0
 ENV TZ=Asia/Shanghai
 
 RUN cp /usr/share/zoneinfo/${TZ} /etc/localtime && echo "${TZ}" > /etc/timezone
