@@ -1,0 +1,7 @@
+server:
+  port: 8317
+  management: true
+providers:
+  openai: []
+  anthropic: []
+  gemini: []
